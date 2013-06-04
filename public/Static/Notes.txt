@@ -1,0 +1,7 @@
+submenubar cleaner
+
+small fps lag
+
+which is the better organization for performance more classes or more code
+
+hover small glitch small empty space

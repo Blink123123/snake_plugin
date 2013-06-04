@@ -1,0 +1,92 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+	<head>
+		<link rel="stylesheet" type="text/css" href="css\StyleSheet.css">
+		<link rel="stylesheet" type="text/css" href="css\Reset.css">
+		<!--Temporary stylesheets-->
+		<link rel="stylesheet" type="text/css" href="css\Layer0.css">
+		<link rel="stylesheet" type="text/css" href="css\Layer1.css">
+		<link rel="stylesheet" type="text/css" href="css\Layer2.css">
+		<link href='http://fonts.googleapis.com/css?family=Marcellus+SC' rel='stylesheet' type='text/css'>
+		<link rel="shortcut icon" href="./Logo.ico">
+		<title>THQ</title>
+	</head>
+	<body>
+		<!--The background image for the website-->
+		<img src="img\Background.jpg" alt="Background" class="Layer0-0">
+		<div class="Layer0-1"></div>
+		<!--The content of the website that are in 1 index behind the top hovering layer-->
+		<div class="Layer1">
+			<!--The initial header of the webpage-->
+			<div id="Head" class="Margin">
+				<img src="img\Company-Logo.png" alt="MainLogo">
+				<p class="Margin">Welcome To THQ! The Number One Gaming Company In The World!<br>
+					Take A Minute To Check Our Featured Games That Are On Sale!</p>
+			</div>
+			<div id="Body" class="Margin">
+				<!--The list of featured games-->
+				<hr class="Shadow RoundShape">
+				<div class="Featured Margin RoundShape Margin">
+					<div class="Caption">
+						<img src="img\Game1.jpg" alt="MainLogo" class="Shadow">
+						<p>Super Mario Bros.</p>
+					</div>
+					<a class="Shadow RoundShape">Super Mario Bros is a 1985 platform video game developed by Nintendo, published for the Nintendo Entertainment System as a pseudo-sequel to the 1983 game Mario Bros. It is the first of the Super Mario series of games. In Super Mario Bros., the player controls Mario and in a two-player game, a second player controls Mario's brother Luigi as he travels through the Mushroom Kingdom in order to rescue Princess Toadstool from the antagonist Bowser.</a>
+				</div>
+				<div class="Featured Margin RoundShape Margin">
+					<div class="Caption">
+						<img src="img\Game2.jpg" alt="MainLogo"  class="Shadow">
+						<p>Race Driver Grid</p>
+					</div>
+					<a class="Shadow RoundShape">Race Driver: Grid, released in North America as simply Grid, is the most recent addition to the TOCA Touring Car series, which is published and developed by Codemasters. The game is available for Microsoft Windows, PlayStation 3 and Xbox 360, and was released in Europe on 30 May 2008, in North America on 3 June 2008 and in Australia on 12 June 2008. The Mac OS X version of the game was released by Feral Interactive on March 28, 2013</a>					
+				</div>
+			</div>
+		</div>
+		<!--The hovering part of the website, all the panels that have position:fixed and are displayed on top-->
+		<div class="Layer2">
+			<div class="MenuBar Shadow RoundShape">
+				<!--The part of the menu bar that is always visible on which we hover to make the menu appear-->
+				<div class="MenuBar-Visible RoundShape">
+					<img src="img\Logo.png" alt="MenuLogo">
+				</div>
+				<!--The hidden part of the menu-->
+				<div class="MenuBar-Hidden">
+					<div class="Element">Home</div>
+					<div class="Element Element-Container">BlockBusters
+						<div class="Element-Table Shadow">
+							<div class="Element-x">Action</div>
+							<div class="Element-x">Adventure</div>
+							<div class="Element-x">Role-Playing</div>
+							<div class="Element-x">Simulation</div>
+							<div class="Element-x">Strategy</div>
+							<div class="Element-x">Other Genres</div>
+						</div>
+					</div>
+					<div class="Element">Search Games</div>
+					<div class="Element">Forum</div>
+					<div class="Element">Contact Us</div>
+				</div>
+			</div>
+			<form class="LoginBar" action="" method="post">
+				<!--The part of the login that is always visible on which we hover to make the login panel appear-->
+				<div class="LoginBar-Visible Shadow"></div>
+				<!--The hidden part of the login bar-->
+				<div class="LoginBar-Hidden RoundShape Shadow">
+					<div class="LoginBar-Input">
+						<div class="LoginBar-Element">
+							<label for="Username">Username: </label>
+							<input type="text" id="Username" name="Username">
+						</div>
+						<div class="LoginBar-Element">
+							<label for="Password">Password: </label>
+							<input type="password" name="Password">
+						</div>
+					</div>
+					<div class="LoginBar-Submit">
+						<input type="submit" value="Submit" class="LoginBar-Element">
+					</div>
+				</div>
+			</form>
+		</div>
+	</body>
+</html>
