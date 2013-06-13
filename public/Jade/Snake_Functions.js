@@ -10,9 +10,10 @@
 
 		settings = $.extend({}, {
 				spawnlocation: {x: 0.5, y: 0.5}
-				,minspeed: 100		
+				,minspeed: 100
 				,maxspeed: 50
 				,scale: 10
+				,snakescale: 10
 				,spawnlength: 12
 				,loadcombo: [0, directions.up, 0, 0, directions.left, 0, 0, directions.down, 0, 0,directions.right, 0]
 				,mainbackcolor: "rgba(255,255,255,0.75)"
@@ -221,19 +222,22 @@
 
 	var paint = function(element) {
 		var drawer = element.getContext("2d")
-		drawer.height = element.clientHeight
-		drawer.width = element.clientWidth
+		drawer.height = element.height
+		drawer.width = element.width
 		drawer.fillStyle = settings.headcolor
 		drawer.clearRect(0, 0, drawer.width, drawer.height)
 		$(element.snake.body).each(function(point) {
 			if (point == element.snake.body.length - 1)
 				drawer.fillStyle = settings.tailcolor
-			drawer.fillRect(element.snake.body[point].x * settings.scale, element.snake.body[point].y * settings.scale, settings.scale - 1, settings.scale - 1)
+			if (settings.snakescale < settings.scale && settings.snakescale > 0)
+				drawer.fillRect(element.snake.body[point].x * settings.scale, element.snake.body[point].y * settings.scale, settings.snakescale, settings.snakescale)
+			else
+				drawer.fillRect(element.snake.body[point].x * settings.scale, element.snake.body[point].y * settings.scale, settings.scale, settings.scale)
 			if (point == 0)
 				drawer.fillStyle = settings.bodycolor
 		})
 		drawer.fillStyle = settings.foodcolor
-		drawer.fillRect(element.snake.food.x * settings.scale, element.snake.food.y * settings.scale, settings.scale - 1, settings.scale - 1)
+		drawer.fillRect(element.snake.food.x * settings.scale, element.snake.food.y * settings.scale, settings.snakescale, settings.snakescale)
 	}
 
 	var checkbuttonqueuable = function (buttona, buttonb) {
